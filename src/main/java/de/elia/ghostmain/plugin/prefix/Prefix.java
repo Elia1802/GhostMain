@@ -34,7 +34,7 @@ public class Prefix {
 
     //Console prefix
     public static String getGhostLogger(){
-        return "[" + "Ghost Main" + "] ";
+        return "[" + "Ghost Logger" + "] ";
     }
 
     //GhostMain prefix
