@@ -1,0 +1,14 @@
+name: GhostMain
+version: '${project.version}'
+main: de.elia.ghostmain.GhostMain
+api-version: 1.18
+authors: [ Elia ]
+description: The main plugin from the server
+website: https://discord.gg/Kpt8kgkhMA , https://www.spigotmc.org/resources/ghost-main.102115/ ,
+
+commands:
+  information:
+    description: Send information of the Plugin creator.
+    aliases:
+      - info
+      - i
