@@ -59,6 +59,7 @@ public final class GhostMain extends JavaPlugin {
 
             Bukkit.getLogger().info(Prefix.getGhostLogger() + "load Config");
                 GhostMainConfig.setup();
+                GhostMainConfig.get().addDefault("Rules" , "Here you can Change the Rules");
                 GhostMainConfig.get().addDefault("Rules 1" , "§4No Bug exploiting");
                 GhostMainConfig.get().addDefault("Rules 2" , "§4No sexism");
                 GhostMainConfig.get().addDefault("Rules 3" , "§4No racism");
