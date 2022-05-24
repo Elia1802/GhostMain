@@ -39,7 +39,7 @@ public class Prefix {
 
     //GhostMain prefix
     public static String getGhostMainPrefix(){
-        return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Logger" + ChatColor.DARK_GRAY + "] ";
+        return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Main" + ChatColor.DARK_GRAY + "] ";
     }
 
     //GhostWarp prefix
