@@ -1,7 +1,7 @@
-package de.elia.ghostmain.command;
+package de.elia.ghostmain.thisplugin.command;
 
-import de.elia.ghostmain.GhostMain;
-import de.elia.ghostmain.plugin.prefix.Prefix;
+import de.elia.ghostmain.thisplugin.GhostMain;
+import de.elia.ghostmain.all.plugins.prefix.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

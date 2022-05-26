@@ -1,6 +1,6 @@
-package de.elia.ghostmain.events.connections.quit;
+package de.elia.ghostmain.thisplugin.events.connections.quit;
 
-import de.elia.ghostmain.plugin.prefix.Prefix;
+import de.elia.ghostmain.all.plugins.prefix.Prefix;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

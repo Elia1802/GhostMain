@@ -1,6 +1,6 @@
 name: GhostMain
 version: '${project.version}'
-main: de.elia.ghostmain.GhostMain
+main: de.elia.ghostmain.thisplugin.GhostMain
 api-version: 1.18
 authors: [ Elia ]
 description: The main plugin from the server

@@ -1,8 +1,8 @@
-package de.elia.ghostmain.events.updater;
+package de.elia.ghostmain.thisplugin.events.updater;
 
-import de.elia.ghostmain.GhostMain;
-import de.elia.ghostmain.plugin.prefix.Prefix;
-import de.elia.ghostmain.plugin.updater.Updater;
+import de.elia.ghostmain.thisplugin.GhostMain;
+import de.elia.ghostmain.all.plugins.prefix.Prefix;
+import de.elia.ghostmain.all.plugins.updater.Updater;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;

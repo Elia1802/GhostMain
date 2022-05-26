@@ -25,9 +25,9 @@
  * SOFTWARE.
  */
 
-package de.elia.ghostmain.plugin.updater;
+package de.elia.ghostmain.all.plugins.updater;
 
-import de.elia.ghostmain.plugin.prefix.Prefix;
+import de.elia.ghostmain.all.plugins.prefix.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.util.Consumer;

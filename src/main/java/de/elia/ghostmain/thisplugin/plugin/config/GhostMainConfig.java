@@ -25,9 +25,9 @@
  * SOFTWARE.
  */
 
-package de.elia.ghostmain.plugin.config;
+package de.elia.ghostmain.thisplugin.plugin.config;
 
-import de.elia.ghostmain.plugin.prefix.Prefix;
+import de.elia.ghostmain.all.plugins.prefix.Prefix;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

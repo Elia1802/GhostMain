@@ -1,6 +1,6 @@
-package de.elia.ghostmain.events.information;
+package de.elia.ghostmain.thisplugin.events.information;
 
-import de.elia.ghostmain.plugin.prefix.Prefix;
+import de.elia.ghostmain.all.plugins.prefix.Prefix;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

@@ -25,17 +25,17 @@
  * SOFTWARE.
  */
 
-package de.elia.ghostmain;
+package de.elia.ghostmain.thisplugin;
 
 import de.elia.ghostmain.command.PluginInformationCommand;
-import de.elia.ghostmain.events.connections.join.PlayerJoinEvent;
-import de.elia.ghostmain.events.connections.quit.PlayerQuitEvent;
-import de.elia.ghostmain.events.information.InformationEvent;
-import de.elia.ghostmain.events.rules.RulesEvent;
-import de.elia.ghostmain.events.updater.UpdateEvent;
-import de.elia.ghostmain.plugin.config.GhostMainConfig;
-import de.elia.ghostmain.plugin.prefix.Prefix;
-import de.elia.ghostmain.plugin.updater.Updater;
+import de.elia.ghostmain.thisplugin.events.connections.join.PlayerJoinEvent;
+import de.elia.ghostmain.thisplugin.events.connections.quit.PlayerQuitEvent;
+import de.elia.ghostmain.thisplugin.events.information.InformationEvent;
+import de.elia.ghostmain.thisplugin.events.rules.RulesEvent;
+import de.elia.ghostmain.thisplugin.events.updater.UpdateEvent;
+import de.elia.ghostmain.thisplugin.plugin.config.GhostMainConfig;
+import de.elia.ghostmain.all.plugins.prefix.Prefix;
+import de.elia.ghostmain.all.plugins.updater.Updater;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 

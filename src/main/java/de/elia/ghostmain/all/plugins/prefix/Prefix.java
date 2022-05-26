@@ -25,7 +25,7 @@
  * SOFTWARE.
  */
 
-package de.elia.ghostmain.plugin.prefix;
+package de.elia.ghostmain.all.plugins.prefix;
 
 import org.bukkit.ChatColor;
 import java.lang.String;
