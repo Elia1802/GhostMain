@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.List;
-//
+
 public class PluginInformationCommand implements CommandExecutor , TabCompleter {
 
     private final GhostMain plugin;
