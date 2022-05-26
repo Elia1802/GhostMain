@@ -27,7 +27,7 @@
 
 package de.elia.ghostmain.thisplugin;
 
-import de.elia.ghostmain.command.PluginInformationCommand;
+import de.elia.ghostmain.thisplugin.command.PluginInformationCommand;
 import de.elia.ghostmain.thisplugin.events.connections.join.PlayerJoinEvent;
 import de.elia.ghostmain.thisplugin.events.connections.quit.PlayerQuitEvent;
 import de.elia.ghostmain.thisplugin.events.information.InformationEvent;
