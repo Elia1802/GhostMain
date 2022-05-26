@@ -23,10 +23,11 @@ public class UpdateEvent implements Listener {
             if (plugin.getDescription().getVersion().equals(version)) {
                 Bukkit.getLogger().info(Prefix.getGhostLogger() + "There is not a new update available.");
             }else {
-                Bukkit.getLogger().warning(Prefix.getGhostLogger() + "There is a new Update available!");
-            }
-            if (event.getPlayer().hasPermission("ghost.developer")) {
-                event.getPlayer().sendMessage(Prefix.getGhostMainPrefix() + ChatColor.GOLD + "A new Update is available!");
+                if (event.getPlayer().isOp()) {
+                    event.getPlayer().sendMessage(Prefix.getGhostMainPrefix() + ChatColor.GOLD + "A new Update is available!");
+                }else if (event.getPlayer().hasPermission("ghost.developer")) {
+                    event.getPlayer().sendMessage(Prefix.getGhostMainPrefix() + ChatColor.GOLD + "A new Update is available!");
+                }
             }
         });
     }
