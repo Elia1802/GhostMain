@@ -2,9 +2,9 @@ Deutsch:
 
 Hallo Leute,
 
-Das ist der erste Offizielle Teil von Ghost.
+Das ist der erste offizielle Teil von Ghost.
 Dieses Plugin hat die Funktionen ein Information Command, Join und Quit Messages, ein Updater sowie alle Prefixe von allen Plugins von Ghost.
-Dieses Plugin ist das Herz von Ghost auch wenn es nicht so viele Informationen für euch besitzt wie die anderen. Aber alle Anderen Plugins holen sich hier
+Dieses Plugin ist das Herz von Ghost auch, wenn es nicht so viele Informationen für euch besitzt wie die anderen. Aber alle anderen Plugins holen sich hier
 die Funktionen raus!
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
