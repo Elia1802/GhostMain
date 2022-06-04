@@ -76,9 +76,9 @@ public final class GhostMain extends JavaPlugin {
             Bukkit.getLogger().info(Prefix.getGhostLogger() + "Checks of Updates");
             new Updater(this , 102115).getVersion(version -> {
                 if (this.getDescription().getVersion().equals(version)) {
-                    Bukkit.getLogger().info(Prefix.getGhostLogger() + "There is not a new update available.");
+                    Bukkit.getLogger().info(Prefix.getGhostLogger() + "There is not a new update for the GhostMain available.");
                 }else {
-                    Bukkit.getLogger().warning(Prefix.getGhostLogger() + "There is a new Update available");
+                    Bukkit.getLogger().warning(Prefix.getGhostLogger() + "There is a new Update for the GhostMain available");
                 }
 
             });
