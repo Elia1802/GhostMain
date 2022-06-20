@@ -4,8 +4,8 @@ Information
 
 Name: GhostMain
 
-Version: 1.0
+Version: 1.4
 
-Minecraft-Version: 1.18-1.18.2
+Minecraft-Version: 1.19
 
 JavaDevelopmentKit Version: JDK 18
