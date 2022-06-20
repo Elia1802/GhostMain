@@ -40,9 +40,14 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class GhostMain extends JavaPlugin {
+    
+     private static GhostMain instance;
+
+    private final GhostMainConfig config = new GhostMainConfig(this , "GhostMain.yml");
 
     @Override
     public void onEnable() {
+        instance = this;
         Bukkit.getLogger().info(Prefix.getGhostLogger() + "Start GhostMain");
 
             Bukkit.getLogger().info(Prefix.getGhostLogger() + "load Commands");
@@ -58,19 +63,18 @@ public final class GhostMain extends JavaPlugin {
             Bukkit.getLogger().info(Prefix.getGhostLogger() + "Listeners loaded");
 
             Bukkit.getLogger().info(Prefix.getGhostLogger() + "load Config");
-                GhostMainConfig.setup();
-                GhostMainConfig.get().addDefault("Rules" , "Here you can Change the Rules");
-                GhostMainConfig.get().addDefault("Rules 1" , "§4No Bug exploiting");
-                GhostMainConfig.get().addDefault("Rules 2" , "§4No sexism");
-                GhostMainConfig.get().addDefault("Rules 3" , "§4No racism");
-                GhostMainConfig.get().addDefault("Rules 4" , "§4No bullying");
-                GhostMainConfig.get().addDefault("Rules 5" , "§4No Insult's");
-                GhostMainConfig.get().addDefault("Rules 6" , "§4No hacking");
-                GhostMainConfig.get().addDefault("Rules 7" , "§4Don't hang or crash the server");
-                GhostMainConfig.get().addDefault("Rules 8" , "§4After death in Ghostworld please use /ghostmode [ghost|hardcore]. If that doesn't happen and he is found out then you can count on a ban");
-                GhostMainConfig.get().addDefault("Rules 9" , "§4If you break the rules, you will be banned");
-                GhostMainConfig.get().options().copyDefaults(true);
-                GhostMainConfig.save();
+                GhostMain.getInstance().getConfiguration().addDefault("Rules" , "Here you can Change the Rules");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 1" , "§4No Bug exploiting");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 2" , "§4No sexism");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 3" , "§4No racism");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 4" , "§4No bullying");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 5" , "§4No Insult's");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 6" , "§4No hacking");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 7" , "§4Don't hang or crash the server");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 8" , "§4After death in Ghostworld please use /ghostmode [ghost|hardcore]. If that doesn't happen and he is found out then you can count on a ban");
+                GhostMain.getInstance().getConfiguration().addDefault("Rules 9" , "§4If you break the rules, you will be banned");
+                GhostMain.getInstance().getConfiguration().copyDefaults(true);
+                GhostMain.getInstance().getConfiguration().save();
             Bukkit.getLogger().info(Prefix.getGhostLogger() + "Config loaded");
 
             Bukkit.getLogger().info(Prefix.getGhostLogger() + "Checks of Updates");
@@ -94,5 +98,13 @@ public final class GhostMain extends JavaPlugin {
         Bukkit.getLogger().info(Prefix.getGhostLogger() + "Stop Events");
         Bukkit.getLogger().info(Prefix.getGhostLogger() + "Save Config");
         Bukkit.getLogger().info(Prefix.getGhostLogger() + "Ghost stopped");
+    }
+    
+    public GhostMainConfig getConfiguration() {
+        return config;
+    }
+
+    public static GhostMain getInstance() {
+        return instance;
     }
 }
