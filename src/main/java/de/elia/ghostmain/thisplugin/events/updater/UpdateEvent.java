@@ -48,7 +48,7 @@ public class UpdateEvent implements Listener {
         Player player = event.getPlayer();
 
         new Updater(GhostMain.getInstance() , 102115).getVersion(version -> {
-            if (!GhostMain.getInstance().getDescription().getVersion().equals(version)) {
+            if (GhostMain.getInstance().getDescription().getVersion().equals(version)) {
                 if (GhostMain.getInstance().getPermissionOwnerConfiguration().get(".Name " + player.getName() + " " + ".UniqueID " + player.getUniqueId() + " " + ".Permission " + ownerPermissionID , true)) {
                     event.getPlayer().sendMessage(Prefix.getGhostMainPrefixOld() + ChatColor.GOLD + "A new Update is for the GhostMain available!");
                 }else if (GhostMain.getInstance().getPermissionDeveloperConfiguration().get(".Name " + player.getName() + " " + ".UniqueID " + player.getUniqueId() + " " + ".Permission " + developerPermissionID ,true)) {

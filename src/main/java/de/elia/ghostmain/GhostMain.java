@@ -114,9 +114,9 @@ public final class GhostMain extends JavaPlugin {
             Bukkit.getLogger().info(Prefix.getGhostLogger() + "Checks of Updates");
             new Updater(this , 102115).getVersion(version -> {
                 if (!this.getDescription().getVersion().equals(version)) {
-                    Bukkit.getLogger().warning(Prefix.getGhostLogger() + "There is a new update for the GhostMain available.");
+                    Bukkit.getLogger().info(Prefix.getGhostLogger() + "There is not a new update for the GhostMain available.");
                 }else {
-                    Bukkit.getLogger().info(Prefix.getGhostLogger() + "There is not a new Update for the GhostMain available");
+                    Bukkit.getLogger().warning(Prefix.getGhostLogger() + "There is a new Update for the GhostMain available");
                 }
 
             });
@@ -127,11 +127,11 @@ public final class GhostMain extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        Bukkit.getLogger().warning(Prefix.getGhostLogger() + "Stop Ghostmain");
+        Bukkit.getLogger().info(Prefix.getGhostLogger() + "Stop Ghost");
         Bukkit.getLogger().info(Prefix.getGhostLogger() + "Stop Commands");
         Bukkit.getLogger().info(Prefix.getGhostLogger() + "Stop Events");
         Bukkit.getLogger().info(Prefix.getGhostLogger() + "Save Config");
-        Bukkit.getLogger().info(Prefix.getGhostLogger() + "Ghostmain stopped");
+        Bukkit.getLogger().info(Prefix.getGhostLogger() + "Ghost stopped");
     }
 
     public GhostMainConfig getMessageConfiguration() {

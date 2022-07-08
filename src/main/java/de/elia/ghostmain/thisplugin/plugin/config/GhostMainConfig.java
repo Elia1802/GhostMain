@@ -616,6 +616,10 @@ public class GhostMainConfig {
         return !contains(path) ? null : config.get(path , value);
     }
 
+    public boolean get(String path , boolean value){
+        return config.contains(path , value);
+    }
+
     public Object getObject(String path , Class<Object> value){
         return !contains(path) ? null : config.getObject(path , value);
     }
