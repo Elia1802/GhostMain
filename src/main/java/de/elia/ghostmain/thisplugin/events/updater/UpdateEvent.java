@@ -27,33 +27,32 @@
 
 package de.elia.ghostmain.thisplugin.events.updater;
 
-import de.elia.ghostmain.thisplugin.GhostMain;
+import de.elia.ghostmain.GhostMain;
 import de.elia.ghostmain.all.plugins.prefix.Prefix;
 import de.elia.ghostmain.all.plugins.updater.Updater;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.jetbrains.annotations.NotNull;
 
 public class UpdateEvent implements Listener {
 
-    private final GhostMain plugin;
+    private final String ownerPermissionID = "ghostowner";
 
-    public UpdateEvent(GhostMain plugin){
-        this.plugin = plugin;
-    }
+    private final String developerPermissionID = "ghostdeveloper";
 
     @EventHandler
-    public void onEvent(PlayerJoinEvent event){
-        new Updater(plugin , 102115).getVersion(version -> {
-            if (plugin.getDescription().getVersion().equals(version)) {
-                Bukkit.getLogger().info(Prefix.getGhostLogger() + "There is not a new update available.");
-            }else {
-                if (event.getPlayer().hasPermission("ghost.owner")) {
-                    event.getPlayer().sendMessage(Prefix.getGhostMainPrefix() + ChatColor.GOLD + "A new Update is for the GhostMain available!");
-                }else if (event.getPlayer().hasPermission("ghost.developer")) {
-                    event.getPlayer().sendMessage(Prefix.getGhostMainPrefix() + ChatColor.GOLD + "A new Update is for the GhostMain available!");
+    public void onEvent(@NotNull PlayerJoinEvent event){
+        Player player = event.getPlayer();
+
+        new Updater(GhostMain.getInstance() , 102115).getVersion(version -> {
+            if (GhostMain.getInstance().getDescription().getVersion().equals(version)) {
+                if (GhostMain.getInstance().getPermissionOwnerConfiguration().get(".Name " + player.getName() + " " + ".UniqueID " + player.getUniqueId() + " " + ".Permission " + ownerPermissionID , true)) {
+                    event.getPlayer().sendMessage(Prefix.getGhostMainPrefixOld() + ChatColor.GOLD + "A new Update is for the GhostMain available!");
+                }else if (GhostMain.getInstance().getPermissionDeveloperConfiguration().get(".Name " + player.getName() + " " + ".UniqueID " + player.getUniqueId() + " " + ".Permission " + developerPermissionID ,true)) {
+                    event.getPlayer().sendMessage(Prefix.getGhostMainPrefixOld() + ChatColor.GOLD + "A new Update is for the GhostMain available!");
                 }
             }
         });
