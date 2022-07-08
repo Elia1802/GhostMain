@@ -2,7 +2,7 @@ Information
 
 Name: GhostMain
 
-Version: 1.4
+Version: 1.6
 
 Minecraft-Version: 1.19
 
