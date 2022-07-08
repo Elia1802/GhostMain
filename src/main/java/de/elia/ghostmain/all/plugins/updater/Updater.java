@@ -57,7 +57,7 @@ public class Updater {
             }catch (IOException exception){
                 Bukkit.getLogger().severe(Prefix.getGhostLogger() + "Unable to check for updates: " + exception.getMessage());
                 Bukkit.getLogger().severe(Prefix.getGhostLogger() + "An error occurred when resolving the IP to SpigotMC or the resource ID is wrong!");
-                Bukkit.getLogger().severe(Prefix.getGhostLogger() + "The error is at de.elia.ghostmain.command.PluginInformationCommand.java");
+                exception.printStackTrace();
             }
         });
     }
