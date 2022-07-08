@@ -1,10 +1,10 @@
 name: GhostMain
 version: '${project.version}'
-main: de.elia.ghostmain.thisplugin.GhostMain
+main: de.elia.ghostmain.GhostMain
 api-version: 1.18
 authors: [ Elia ]
 description: The main plugin from the server
-website: https://discord.gg/Kpt8kgkhMA , https://www.spigotmc.org/resources/ghost-main.102115/ ,
+website: https://discord.gg/Kpt8kgkhMA
 loadbefore:
   - GhostWarp
   - Ghostchat
@@ -14,3 +14,22 @@ commands:
     aliases:
       - info
       - i
+  setpermission:
+    description: Set a Permission.
+    aliases:
+      - setperm
+  infopermission:
+    description: Send a info of the Playerpermission.
+    aliases:
+      - informationpermission
+      - informationperm
+      - infoperm
+      - ipermission
+      - iperm
+  helppermission:
+    description: Send a Help about the Permissionsystem.
+    aliases:
+      - helpperm
+  delpermission:
+    description: Deleted a Permission of the Player
+    aliases: delperm
