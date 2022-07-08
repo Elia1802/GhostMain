@@ -27,57 +27,80 @@
 
 package de.elia.ghostmain.all.plugins.prefix;
 
+import de.elia.ghostmain.GhostMain;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.ChatColor;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.lang.String;
 
 public class Prefix {
 
+    private static final MiniMessage mm = GhostMain.getMm();
+
     //Console prefix
-    public static String getGhostLogger(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostLogger(){
         return "[" + "Ghost Logger" + "] ";
     }
 
     //GhostMain prefix
-    public static String getGhostMainPrefix(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostMainPrefixOld(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Main" + ChatColor.DARK_GRAY + "] ";
     }
 
+    @Contract(pure = true)
+    public static @NotNull Component getGhostMainPrefix(){
+        return mm.deserialize("<dark_gray>[</dark_gray> <aqua>Ghost Main</aqua> <dark_gray>]</dark_gray> ");
+    }
+
     //GhostWarp prefix
-    public static String getGhostWarpPrefix(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostWarpPrefix(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Warpsystem" + ChatColor.DARK_GRAY + "] ";
     }
 
     //GhostInventory prefix
-    public static String getGhostInventory(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostInventory(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Inventorysystem" + ChatColor.DARK_GRAY + "] ";
     }
 
     //GhostCommand prefix
-    public static String getGhostCommandSystem(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostCommandSystem(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Commandsystem" + ChatColor.DARK_GRAY + "] ";
     }
 
     //GhostPermission prefix
-    public static String getGhostPermissionSystem(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostPermissionSystem(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Permissionsystem" + ChatColor.DARK_GRAY + "] ";
     }
 
     //GhostChat prefix
-    public static String getGhostChatSystem(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostChatSystem(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Chatsystem" + ChatColor.DARK_GRAY + "] ";
     }
 
     //GhostTablist prefix
-    public static String getGhostTablist(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostTablist(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Tablist" + ChatColor.DARK_GRAY + "] ";
     }
 
     //GhostScoreboard prefix
-    public static String getGhostScoreboard(){
+    @Contract(pure = true)
+    public static @NotNull String getGhostScoreboard(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost Scoreboard" + ChatColor.DARK_GRAY + "] ";
     }
 
-    public static String getServerFunctions(){
+    @Contract(pure = true)
+    public static @NotNull String getServerFunctions(){
         return ChatColor.DARK_GRAY + "[" + ChatColor.AQUA + "Ghost ServerFunctions" + ChatColor.DARK_GRAY + "] ";
     }
 }
