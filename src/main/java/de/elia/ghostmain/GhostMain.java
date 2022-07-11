@@ -38,6 +38,7 @@ import de.elia.ghostmain.thisplugin.events.updater.UpdateEvent;
 import de.elia.ghostmain.thisplugin.plugin.config.GhostMainConfig;
 import de.elia.ghostmain.all.plugins.prefix.Prefix;
 import de.elia.ghostmain.all.plugins.updater.Updater;
+import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -161,4 +162,9 @@ public final class GhostMain extends JavaPlugin {
     public static MiniMessage getMm() {
         return mm;
     }
+
+    public static void sendDisplayBroadcast(Component message){
+        Bukkit.broadcast(Prefix.getGhostDisplay().append(message));
+    }
+
 }

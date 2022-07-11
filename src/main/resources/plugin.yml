@@ -8,6 +8,7 @@ website: https://discord.gg/Kpt8kgkhMA
 loadbefore:
   - GhostWarp
   - Ghostchat
+  - GhostDisplay
 commands:
   information:
     description: Send information of the Plugin creator.

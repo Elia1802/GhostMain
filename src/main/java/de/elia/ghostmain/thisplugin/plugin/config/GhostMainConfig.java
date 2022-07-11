@@ -42,6 +42,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.util.Vector;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 import java.io.Reader;
 import java.io.File;
@@ -147,7 +149,7 @@ public class GhostMainConfig {
         save();
     }
 
-    public GhostMainConfig(Plugin plugin , String pathName , String name) {
+    public GhostMainConfig(@NotNull Plugin plugin , String pathName , String name) {
         this.plugin = plugin;
         this.pathName = pathName;
         this.fileName = name;
@@ -175,7 +177,7 @@ public class GhostMainConfig {
         this(plugin , pathName , name , copyDefaults , false);
     }
 
-    public GhostMainConfig(Plugin plugin , String pathName , String name , boolean copyDefaults , boolean replace){
+    public GhostMainConfig(@NotNull Plugin plugin , String pathName , String name , boolean copyDefaults , boolean replace){
         this.plugin = plugin;
         this.pathName = pathName;
         this.fileName = name;
@@ -207,7 +209,7 @@ public class GhostMainConfig {
         save();
     }
 
-    public YamlConfiguration reload() {
+    public @NotNull YamlConfiguration reload() {
         if (filepath == null && useCustomPath) {
             filepath = new File(plugin.getDataFolder() , pathName);
         }else if (filepath == null) {
